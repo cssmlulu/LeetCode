@@ -25,7 +25,7 @@ public:
 
 //2015-08-17
 //12ms
-//http://www.cnblogs.com/x1957/p/3373994.html
+//利用三个变量分别保存各个二进制位上 1 出现一次、两次、三次的分布情况，最后只需返回变量一就行了。
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
