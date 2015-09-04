@@ -27,3 +27,23 @@ int hIndex(vector<int>& citations) {
         return i;
     }
 };
+
+
+//[count] papers have at least citations[i] citations each
+class Solution {
+public:
+int hIndex(vector<int>& citations) {
+        sort(citations.begin(),citations.end());
+        int i=citations.size();
+        if(i<=0) return i;
+        
+        int count=0;
+        for(i-=1; i>=0; i--) {
+            if(count>=citations[i])
+                return count;
+            count++;
+        }
+        return count;
+
+    }
+};
